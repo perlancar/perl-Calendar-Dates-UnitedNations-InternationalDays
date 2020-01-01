@@ -36,7 +36,7 @@ for my $match (@matches) {
         log_warn "Skipping entry %s: can't parse date", $match;
         next;
     }
-    printf "%s;%s;anniversary\n", $dt->ymd, $match->[3];
+    printf "--%02d-%02d;%s;anniversary\n", $dt->month, $dt->day, $match->[3];
 }
 
 #use DD; dd \@matches;
